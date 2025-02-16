@@ -1,13 +1,13 @@
-package fizzbuzz;
+package fizzbuzz.rules;
 
-public class FizzRule implements Rule {
+public class BuzzRule implements Rule {
     @Override
     public boolean appliesTo(Integer number) {
-        return number % 3 == 0;
+        return number % 5 == 0;
     }
 
     @Override
     public String getResult() {
-        return "Fizz";
+        return "Buzz";
     }
 }

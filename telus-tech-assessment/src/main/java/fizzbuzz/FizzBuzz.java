@@ -1,5 +1,10 @@
 package fizzbuzz;
 
+import fizzbuzz.rules.BuzzRule;
+import fizzbuzz.rules.FizzBuzzRule;
+import fizzbuzz.rules.FizzRule;
+import fizzbuzz.rules.Rule;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

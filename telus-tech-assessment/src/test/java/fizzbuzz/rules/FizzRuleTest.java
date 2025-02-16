@@ -1,4 +1,4 @@
-package fizzbuzz;
+package fizzbuzz.rules;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,6 @@
-package fizzbuzz;
+package fizzbuzz.rules;
 
-interface Rule {
+public interface Rule {
     boolean appliesTo(Integer number);
     String getResult();
 }

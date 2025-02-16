@@ -1,4 +1,4 @@
-package fizzbuzz;
+package fizzbuzz.rules;
 
 public class FizzBuzzRule implements Rule {
     @Override
