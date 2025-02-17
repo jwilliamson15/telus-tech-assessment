@@ -1,7 +1,7 @@
 package filtering;
 
-import static filtering.TextFileFilter.INPUT_PREFIX;
-import static filtering.TextFileFilter.OUTPUT_FILE;
+import static filtering.TextFileFilterApplication.INPUT_PREFIX;
+import static filtering.TextFileFilterApplication.OUTPUT_FILE;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class TextFileFilterTest {
+class TextFileFilterApplicationTest {
 
     @Test
     void readsTextFromInputFile() {
-        List<String> inputText = TextFileFilter.readInputFile();
+        List<String> inputText = TextFileFilterApplication.readInputFile();
 
         assertNotNull(inputText);
         assertFalse(inputText.isEmpty());
@@ -23,8 +23,8 @@ class TextFileFilterTest {
 
     @Test
     void RemovesPrefixFromLinesOfText() {
-        List<String> inputText = TextFileFilter.readInputFile();
-        List<String> filteredText = TextFileFilter.removePrefixFromText(inputText);
+        List<String> inputText = TextFileFilterApplication.readInputFile();
+        List<String> filteredText = TextFileFilterApplication.removePrefixFromText(inputText);
 
         for(String textLine: filteredText) {
             assertFalse(textLine.startsWith(INPUT_PREFIX));
@@ -33,10 +33,10 @@ class TextFileFilterTest {
 
     @Test
     void writesFilteredTextToOutputFile() throws FileNotFoundException {
-        List<String> inputText = TextFileFilter.readInputFile();
-        List<String> filteredText = TextFileFilter.removePrefixFromText(inputText);
+        List<String> inputText = TextFileFilterApplication.readInputFile();
+        List<String> filteredText = TextFileFilterApplication.removePrefixFromText(inputText);
 
-        TextFileFilter.writeTextToFile(filteredText);
+        TextFileFilterApplication.writeTextToFile(filteredText);
 
         final File filteredFile =
                 new File("src/main/resources/output.properties");
@@ -56,7 +56,7 @@ class TextFileFilterTest {
 
     @Test
     void testsMainMethodRunsWithoutError() throws FileNotFoundException {
-        TextFileFilter.main(new String[]{});
+        TextFileFilterApplication.main(new String[]{});
 
         List<String> result = new ArrayList<>();
         try (Scanner reader = new Scanner(OUTPUT_FILE)) {

@@ -1,4 +1,33 @@
 # telus-tech-assessment
+
+Thank you for taking the time to look at my implementation of the TELUS Technical Assessment. I have completed all 3 questions
+within 3 main packages within this repository (filtering, fizzbuzz and socks).
+
+This project has been written using Java 11.
+
+Each solution can be run individually from the main method within the Application class, ie, [TextFileFilterApplication.java](telus-tech-assessment/src/main/java/filtering/TextFileFilterApplication.java)
+from an IDE of your choice.
+
+If you wish to run this project from the terminal, please follow these steps:
+
+Build the project to a jar file: 
+
+`./gradlew clean build`
+
+Navigate to the directory of that jar:
+
+`cd ./build/libs/`
+
+Run each application:
+
+`java -cp .\telus-tech-assessment-1.0-SNAPSHOT.jar filtering.TextFileFilterApplication`
+
+`java -cp .\telus-tech-assessment-1.0-SNAPSHOT.jar socks.SocksApplication`
+
+`java -cp .\telus-tech-assessment-1.0-SNAPSHOT.jar fizzbuzz.FizzBuzzApplication`
+
+
+## The Challenge
 Technical Assessment for TELUS Senior Software Engineer role
 
 There are 3 questions of varying complexity which you will need to provide a Java solution for.

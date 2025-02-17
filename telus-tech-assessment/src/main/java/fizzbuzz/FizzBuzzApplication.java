@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class FizzBuzz {
+public class FizzBuzzApplication {
     private static final List<Integer> first100IntegerNumbers = IntStream.range(1, 101)
             .boxed()
             .collect(Collectors.toList());

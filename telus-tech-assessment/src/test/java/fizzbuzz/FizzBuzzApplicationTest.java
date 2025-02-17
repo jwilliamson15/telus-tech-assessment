@@ -6,12 +6,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FizzBuzzTest {
-    FizzBuzz fizzBuzz;
+class FizzBuzzApplicationTest {
+    FizzBuzzApplication fizzBuzz;
 
     @BeforeEach
     void setUp() {
-        fizzBuzz = new FizzBuzz();
+        fizzBuzz = new FizzBuzzApplication();
     }
 
     @ParameterizedTest

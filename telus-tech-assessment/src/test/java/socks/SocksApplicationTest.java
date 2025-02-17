@@ -8,9 +8,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static socks.Socks.calculateUniqueSockPairsForYear;
+import static socks.SocksApplication.calculateUniqueSockPairsForYear;
 
-class SocksTest {
+class SocksApplicationTest {
 
     @ParameterizedTest
     @ValueSource(ints = {2011, 2012, 2013}) //2011 is non-leap year, 2012 is a leap year and 2013 is asked in requirements
@@ -26,7 +26,7 @@ class SocksTest {
         final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStreamCaptor));
 
-        Socks.printSpecialOccasionDays(2013);
+        SocksApplication.printSpecialOccasionDays(2013);
         final String chineseNewYearPrintString = "Chinese New Year: SUNDAY 10";
         final String eidPrintString = "Eid: THURSDAY 8";
         final String easterSundayPrintString = "Easter Sunday: SUNDAY 31";

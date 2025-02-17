@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class TextFileFilter {
+public class TextFileFilterApplication {
     static final String INPUT_PREFIX = "prefix.";
     static final File INPUT_FILE = new File("src/main/resources/input.properties");
     static final File OUTPUT_FILE = new File("src/main/resources/output.properties");

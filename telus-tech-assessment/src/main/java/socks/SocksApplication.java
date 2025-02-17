@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Socks {
+public class SocksApplication {
     private static final int YEAR = 2013;
 
     public static void main(String[] args) {
