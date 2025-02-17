@@ -25,11 +25,43 @@ class EidTest {
     }
 
     @Test
+    void calculateEidIn2014() {
+        LocalDate actualEid2014 = LocalDate.of(2014, Month.JULY, 28);
+        LocalDate result = eid.calculate(2014);
+
+        assertEquals(actualEid2014, result);
+    }
+
+    @Test
+    void calculateEidIn2015() {
+        LocalDate actualEid2015 = LocalDate.of(2015, Month.JULY, 17);
+        LocalDate result = eid.calculate(2015);
+
+        assertEquals(actualEid2015, result);
+    }
+
+    @Test
+    void calculateEidIn2016() {
+        LocalDate actualEid2016 = LocalDate.of(2016, Month.JULY, 6);
+        LocalDate result = eid.calculate(2016);
+
+        assertEquals(actualEid2016, result);
+    }
+
+    @Test
     void calculateEidIn2017() {
         LocalDate actualEid2017 = LocalDate.of(2017, Month.JUNE, 25);
         LocalDate result = eid.calculate(2017);
 
         assertEquals(actualEid2017, result);
+    }
+
+    @Test
+    void calculateEidIn2018() {
+        LocalDate actualEid2018 = LocalDate.of(2018, Month.JUNE, 15);
+        LocalDate result = eid.calculate(2018);
+
+        assertEquals(actualEid2018, result);
     }
 
     @Test

@@ -20,9 +20,7 @@ public class FizzBuzz {
             new BuzzRule());
 
     public static void main(String[] args) {
-        for(Integer integer: first100IntegerNumbers) {
-            System.out.println(playFizzBuzz(integer));
-        }
+        first100IntegerNumbers.forEach(integer -> System.out.println(playFizzBuzz(integer)));
     }
 
     static String playFizzBuzz(Integer integer) {
