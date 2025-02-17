@@ -15,7 +15,7 @@ class TextFileFilterTest {
 
     @Test
     void readsTextFromInputFile() {
-        ArrayList<String> inputText = TextFileFilter.readInputFile();
+        List<String> inputText = TextFileFilter.readInputFile();
 
         assertNotNull(inputText);
         assertFalse(inputText.isEmpty());
@@ -23,8 +23,8 @@ class TextFileFilterTest {
 
     @Test
     void RemovesPrefixFromLinesOfText() {
-        ArrayList<String> inputText = TextFileFilter.readInputFile();
-        ArrayList<String> filteredText = TextFileFilter.removePrefixFromText(inputText);
+        List<String> inputText = TextFileFilter.readInputFile();
+        List<String> filteredText = TextFileFilter.removePrefixFromText(inputText);
 
         for(String textLine: filteredText) {
             assertFalse(textLine.startsWith(INPUT_PREFIX));
@@ -33,8 +33,8 @@ class TextFileFilterTest {
 
     @Test
     void writesFilteredTextToOutputFile() throws FileNotFoundException {
-        ArrayList<String> inputText = TextFileFilter.readInputFile();
-        ArrayList<String> filteredText = TextFileFilter.removePrefixFromText(inputText);
+        List<String> inputText = TextFileFilter.readInputFile();
+        List<String> filteredText = TextFileFilter.removePrefixFromText(inputText);
 
         TextFileFilter.writeTextToFile(filteredText);
 

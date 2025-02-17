@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class TextFileFilter {
     static final String INPUT_PREFIX = "prefix.";
@@ -15,12 +17,12 @@ public class TextFileFilter {
 
 
     public static void main(String[] args) {
-        ArrayList<String> inputText = readInputFile();
-        ArrayList<String> filteredText = removePrefixFromText(inputText);
+        List<String> inputText = readInputFile();
+        List<String> filteredText = removePrefixFromText(inputText);
         writeTextToFile(filteredText);
     }
 
-    static ArrayList<String> readInputFile() {
+    static List<String> readInputFile() {
         ArrayList<String> inputDataToReturn = new ArrayList<>();
 
         try (Scanner reader = new Scanner(INPUT_FILE)) {
@@ -35,17 +37,13 @@ public class TextFileFilter {
         return inputDataToReturn;
     }
 
-    static ArrayList<String> removePrefixFromText(ArrayList<String> inputText) {
-        ArrayList<String> filteredText = new ArrayList<>();
-
-        for(String textLine: inputText) {
-            filteredText.add(textLine.replace(INPUT_PREFIX, ""));
-        }
-
-        return filteredText;
+    static List<String> removePrefixFromText(List<String> inputText) {
+        return inputText.stream()
+                .map(textLine -> textLine.replace(INPUT_PREFIX, ""))
+                .collect(Collectors.toList());
     }
 
-    static void writeTextToFile(ArrayList<String> filteredText) {
+    static void writeTextToFile(List<String> filteredText) {
         try (FileWriter writer = new FileWriter(OUTPUT_FILE)) {
             for(String line: filteredText) {
                 writer.write(line + "\n");
