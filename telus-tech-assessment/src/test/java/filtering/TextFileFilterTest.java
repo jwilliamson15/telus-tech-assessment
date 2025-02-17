@@ -1,13 +1,14 @@
 package filtering;
 
 import static filtering.TextFileFilter.INPUT_PREFIX;
+import static filtering.TextFileFilter.OUTPUT_FILE;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 class TextFileFilterTest {
@@ -51,5 +52,20 @@ class TextFileFilterTest {
         for(String line: outputText) {
             assertFalse(line.startsWith(INPUT_PREFIX));
         }
+    }
+
+    @Test
+    void testsMainMethodRunsWithoutError() throws FileNotFoundException {
+        TextFileFilter.main(new String[]{});
+
+        List<String> result = new ArrayList<>();
+        try (Scanner reader = new Scanner(OUTPUT_FILE)) {
+            while (reader.hasNextLine()) {
+                result.add(reader.nextLine());
+            }
+        }
+
+        assertEquals(3, result.size());
+        assertEquals("test.cfg.root=/test/cfg", result.get(0));
     }
 }
