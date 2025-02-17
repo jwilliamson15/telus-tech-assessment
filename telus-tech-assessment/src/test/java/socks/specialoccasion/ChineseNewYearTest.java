@@ -1,4 +1,4 @@
-package socks.specialoccasions;
+package socks.specialoccasion;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

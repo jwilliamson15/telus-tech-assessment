@@ -1,4 +1,4 @@
-package socks.specialoccasions;
+package socks.specialoccasion;
 
 import java.time.LocalDate;
 

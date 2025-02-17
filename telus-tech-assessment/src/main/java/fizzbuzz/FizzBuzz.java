@@ -1,9 +1,9 @@
 package fizzbuzz;
 
-import fizzbuzz.rules.BuzzRule;
-import fizzbuzz.rules.FizzBuzzRule;
-import fizzbuzz.rules.FizzRule;
-import fizzbuzz.rules.Rule;
+import fizzbuzz.rule.BuzzRule;
+import fizzbuzz.rule.FizzBuzzRule;
+import fizzbuzz.rule.FizzRule;
+import fizzbuzz.rule.Rule;
 
 import java.util.List;
 import java.util.stream.Collectors;

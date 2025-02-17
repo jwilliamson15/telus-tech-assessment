@@ -1,8 +1,8 @@
 package socks;
 
-import socks.specialoccasions.ChineseNewYear;
-import socks.specialoccasions.EasterSunday;
-import socks.specialoccasions.Eid;
+import socks.specialoccasion.ChineseNewYear;
+import socks.specialoccasion.EasterSunday;
+import socks.specialoccasion.Eid;
 
 import java.time.LocalDate;
 import java.util.HashSet;
